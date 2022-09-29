@@ -1,4 +1,5 @@
 const express = require('express');
+const UserController = require('./controllers/UserController');
 
 
 // A router object is an isolated instance of middleware and routes.
@@ -10,5 +11,8 @@ const routes = express.Router();
 routes.get('/', (req, res) => {
     return res.json({ Hello: 'World' })
 })
+
+routes.get('/users', UserController.index);
+routes.post('/users', UserController.store);
 
 module.exports = routes;
