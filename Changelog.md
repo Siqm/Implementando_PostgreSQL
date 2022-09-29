@@ -5,3 +5,5 @@
 # Terceiro commit, Migration de usuário configurada e tabela criada
 
 # Quarto commit, Modelo de usuário criado, rotas post e get para usuário
+
+# Quinto commit, Começando a implementar relação muitos-muitos entre user ~ role
