@@ -1,4 +1,5 @@
 const Role = require("../models/Role");
+const User = require('../models/User')
 
 module.exports = {
     async index (req, res) {
@@ -8,10 +9,13 @@ module.exports = {
     },
     
     async store (req, res) {
-        const { name, extensionNumber } = req.body;
+        const { user_id, name, extensionNumber } = req.body;
+
 
         const [ role ] = Role.findOrCreate({
             where: {name, extensionNumber}
         })
+
+        return res.josn(role);
     }
 }
